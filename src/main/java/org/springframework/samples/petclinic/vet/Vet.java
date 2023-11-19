@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlElement;
  * @author Arjen Poutsma
  */
 @Entity
-@Table(name = "vets")
+@Table(name = "vets", schema = "admin")
 public class Vet extends Person {
 
 	@ManyToMany(fetch = FetchType.EAGER)

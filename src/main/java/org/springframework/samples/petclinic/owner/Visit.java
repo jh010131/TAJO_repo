@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotBlank;
  * @author Dave Syer
  */
 @Entity
-@Table(name = "visits")
+@Table(name = "visits", schema = "admin")
 public class Visit extends BaseEntity {
 
 	@Column(name = "visit_date")

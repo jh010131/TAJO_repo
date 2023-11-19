@@ -26,7 +26,7 @@ import jakarta.persistence.Table;
  * @author Juergen Hoeller
  */
 @Entity
-@Table(name = "specialties")
+@Table(name = "specialties", schema = "admin")
 public class Specialty extends NamedEntity {
 
 }
