@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - echo now pre_build
+  build:
+    commands:
+      - echo Build Started
+      - ./mvnw clean package -DskipTests
+artifats:
+  files:
+    - target/spring-petclinic.war
+  discard-paths: yes
