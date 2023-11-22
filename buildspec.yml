@@ -4,14 +4,21 @@ phases:
   install:
     runtime-versions:
       java: corretto17
-  pre_build:
-    commands:
-      - echo now pre_build
   build:
     commands:
       - echo Build Started
-      - ./mvnw clean package -DskipTests
-artifats:
+      - sudo chmod +x gradlew
+      - ./mvnw clean install -DskipTests
+  post_build:
+    commands:
+      - echo $(basename ./target/*.war)
+      - pwd
+artifacts:
   files:
-    - target/spring-petclinic.war
+    - target/*.war
+    - appspec.yml
+    - scripts/**
   discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
