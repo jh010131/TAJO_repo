@@ -4,14 +4,18 @@ phases:
   install:
     runtime-versions:
       java: corretto17
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase
   build:
     commands:
-      - echo Build Started
+      - echo Build Started on `date`
       - sudo chmod +x mvnw
       - ./mvnw clean package -DskipTests
   post_build:
     commands:
       - echo $(basename ./target/*.war)
+      - echo Build completed on `date`
       - pwd
 artifacts:
   files:
