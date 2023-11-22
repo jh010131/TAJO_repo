@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build Started
       - sudo chmod +x mvnw
-      - ./mvnw clean install -DskipTests
+      - ./mvnw clean package -DskipTests
   post_build:
     commands:
       - echo $(basename ./target/*.war)
