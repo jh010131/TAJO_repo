@@ -12,8 +12,11 @@ permissions:
     mode: 755
 
 hooks:
-
+  BeforeInstall:
+    - location: scripts/set_web_conf.sh
+      timeout: 300
+      runas: ec2-user
   AfterInstall:
-    - location: start.sh
+    - location: web_start.sh
       timeout: 300
       runas: ec2-user
