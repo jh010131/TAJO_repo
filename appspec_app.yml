@@ -12,13 +12,13 @@ permissions:
     mode: 755
 
 hooks:
-  BeforeInstall:
-    - location: scripts/set_app_env.sh
-      timeout: 300
-      runas: ec2-user
-    - location: scripts/app_init.sh
-      timeout: 300
-      runas: ec2-user
+  # BeforeInstall:
+  #   - location: scripts/set_app_env.sh
+  #     timeout: 300
+  #     runas: ec2-user
+  #   - location: scripts/app_init.sh
+  #     timeout: 300
+  #     runas: ec2-user
   AfterInstall:
     - location: app_start.sh
       timeout: 300
