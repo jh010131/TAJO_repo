@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source /etc/profile
 cd /home/ec2-user
 
 BUILD_WAR=$(ls /home/ec2-user/build/*.war)
