@@ -1,7 +1,9 @@
 #!/bin/bash
 
+git clone https://github.com/jh010131/TAJO_repo.git
+
 # 웹 서버에 복사할 정적 파일들이 있는 디렉토리
-source_dir="https://raw.githubusercontent.com/jh010131/TAJO_repo/main/src/main/resources/static/resources"
+source_dir="/home/ec2-user/TAJO_repo/src/main/resources/static/resources"
 
 # 웹 서버의 정적 파일이 위치할 디렉토리
 web_dir="/var/www/html"
@@ -10,7 +12,7 @@ web_dir="/var/www/html"
 restart_web_server=true
 
 # 정적 파일 다운로드
-sudo wget -r -nH --cut-dirs=4 -P "$web_dir" "$source_dir"
+sudo cp -r $source_dir/* $web_dir
 
 # 웹 서버 재시작
 if [ "$restart_web_server" = true ]; then
