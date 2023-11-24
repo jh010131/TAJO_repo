@@ -13,7 +13,7 @@ permissions:
 
 hooks:
   ApplicationStart:
-    - location: /home/ec2-user/build/app_start.sh
+    - location: app_start.sh
       timeout: 300
       runas: ec2-user
   # ApplicationStart_web:
