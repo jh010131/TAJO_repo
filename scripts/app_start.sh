@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo su ec2-user
-source /etc/profile
+sudo source /etc/profile
 cd /home/ec2-user
 
 BUILD_WAR=$(ls /home/ec2-user/build/*.war)
@@ -10,7 +9,7 @@ WAR_NAME=$(basename $BUILD_WAR)
 
 # echo "> build 파일 복사" >> /home/ec2-user/deploy.log
 DEPLOY_PATH="$CATALINA_HOME/webapps/"
-cp $BUILD_WAR $DEPLOY_PATH
+sudo cp $BUILD_WAR $DEPLOY_PATH
 
 # echo "> 현재 실행중인 애플리케이션 pid 확인" >> /home/ec2-user/deploy.log
 # CURRENT_PID=$(pgrep -f $WAR_NAME)
