@@ -20,8 +20,8 @@ phases:
 artifacts:
   files:
     - target/*.war
-    - appspec_app.yml
-    - appspec_web.yml
+    - appspec.yml
+    - appspec.yml
     - scripts/**/*
   discard-paths: yes
 cache:
