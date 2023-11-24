@@ -19,7 +19,7 @@ phases:
       - pwd
 artifacts:
   files:
-    - web/**
+    - web/**/*
     - target/*.war
     - appspec.yml
     - scripts/**/*
