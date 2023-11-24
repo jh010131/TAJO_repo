@@ -19,10 +19,9 @@ phases:
       - pwd
 artifacts:
   files:
-    - web/**/*
-    - target/*.war
+    - ../target/*.war
     - appspec.yml
-    - scripts/**/*
+    - ../scripts/**/*
   discard-paths: yes
 cache:
   paths:

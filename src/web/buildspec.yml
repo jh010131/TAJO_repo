@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase
+  build:
+    commands:
+      - echo Build Started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - pwd
+artifacts:
+  files:
+    - static/**/*
+    - appspec.yml
+    - ../scripts/web_start.sh
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
