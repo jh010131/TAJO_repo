@@ -18,7 +18,7 @@ artifacts:
   files:
     - src/web/static/**/*
     - src/web/appspec.yml
-    - src/web/scripts/web_start.sh
+    - src/scripts/web_start.sh
   discard-paths: yes
 cache:
   paths:
