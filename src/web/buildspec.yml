@@ -16,7 +16,7 @@ phases:
       - pwd
 artifacts:
   files:
-    - src/web/static/**/*
+    - src/web/static/**
     - src/web/appspec.yml
     - src/scripts/web_start.sh
   discard-paths: yes
