@@ -14,7 +14,7 @@ phases:
 artifacts:
   files:
     - static/**/*
-    - web/appspec.yml
+    - appspec.yml
     - scripts/web_start.sh
   discard-paths: no
 cache:
