@@ -15,6 +15,7 @@ artifacts:
   files:
     - static/**/*
     - appspec.yml
+    - scripts/deploy_before.sh
     - scripts/web_start.sh
   discard-paths: no
 cache:
