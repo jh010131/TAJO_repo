@@ -22,6 +22,7 @@ artifacts:
     - target/*.war
     - app/appspec.yml
     - scripts/app_start.sh
+    - scripts/deploy_before.sh
   discard-paths: no
 cache:
   paths:
