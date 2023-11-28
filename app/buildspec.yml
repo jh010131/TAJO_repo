@@ -22,7 +22,7 @@ artifacts:
     - target/*.war
     - app/appspec.yml
     - scripts/app_start.sh
-  discard-paths: yes
+  discard-paths: no
 cache:
   paths:
     - '/root/.m2/**/*'
