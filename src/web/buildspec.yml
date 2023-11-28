@@ -15,11 +15,11 @@ artifacts:
   files:
     - static/**/*
   discard-paths: no
-
-  files:
-    - src/web/appspec.yml
-    - src/scripts/web_start.sh
-  discard-paths: yes
+  secondary-artifacts:
+    files:
+      - src/web/appspec.yml
+      - src/scripts/web_start.sh
+    discard-paths: yes
   
 cache:
   paths:
