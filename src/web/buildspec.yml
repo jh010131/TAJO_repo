@@ -16,7 +16,6 @@ artifacts:
     - src/web/static/**/*
     - src/web/appspec.yml
     - src/scripts/web_start.sh
-  base-directory: 'dist'
 cache:
   paths:
     - '/root/.m2/**/*'
