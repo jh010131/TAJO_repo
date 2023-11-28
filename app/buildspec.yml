@@ -17,13 +17,16 @@ phases:
       - echo $(basename ./target/*.war)
       - echo Build completed on `date`
       - pwd
+
 artifacts:
   files:
     - target/*.war
     - app/appspec.yml
     - scripts/app_start.sh
     - scripts/deploy_before.sh
-  discard-paths: no
+  discard-paths: yes
 cache:
   paths:
     - '/root/.m2/**/*'
+  
+  
