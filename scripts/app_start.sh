@@ -7,10 +7,7 @@ TOMCAT_START="/home/tomcat/apache-tomcat-10.1.12/bin/startup.sh"
 
 sudo chmod +x $DEPLOY_PATH
 
-sudo rm -rf $DEPLOY_PATH/*
-
 sudo cp $BUILD_WAR $DEPLOY_PATH
-
 
 sudo $TOMCAT_STOP
 sudo $TOMCAT_START
