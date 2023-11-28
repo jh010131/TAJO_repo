@@ -13,6 +13,6 @@ permissions:
 
 hooks:
   ApplicationStart_web:
-    - location: web_start.sh
+    - location: scripts/web_start.sh
       timeout: 300
       runas: ec2-user

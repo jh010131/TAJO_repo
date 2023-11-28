@@ -13,6 +13,6 @@ permissions:
 
 hooks:
   ApplicationStart:
-    - location: app_start.sh
+    - location: scripts/app_start.sh
       timeout: 300
       runas: root

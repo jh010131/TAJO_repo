@@ -1,26 +1,28 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto17
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase
   build:
     commands:
       - echo Build Started on `date`
+      - sudo chmod +x mvnw
+      - ./mvnw clean package -DskipTests
   post_build:
     commands:
+      - echo $(basename ./target/*.war)
       - echo Build completed on `date`
       - pwd
 artifacts:
   files:
-    - static/**/*
-  discard-paths: no
-  secondary-artifacts:
-    files:
-      - src/web/appspec.yml
-      - src/scripts/web_start.sh
-    discard-paths: yes
-  
+    - target/*.war
+    - app/appspec.yml
+    - scripts/app_start.sh
+  discard-paths: yes
 cache:
   paths:
     - '/root/.m2/**/*'
