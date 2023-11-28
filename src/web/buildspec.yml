@@ -13,10 +13,14 @@ phases:
       - pwd
 artifacts:
   files:
-    - src/web/static/**/*
+    - static/**/*
+  discard-paths: no
+
+  files:
     - src/web/appspec.yml
     - src/scripts/web_start.sh
-  discard-paths: no
+  discard-paths: yes
+  
 cache:
   paths:
     - '/root/.m2/**/*'
