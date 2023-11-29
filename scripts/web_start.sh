@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd /home/ec2-user
-
 # 웹 서버에 복사할 정적 파일들이 있는 디렉토리
 SOURCE_DIR="/home/ec2-user/build/static"
 

@@ -7,16 +7,16 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ec2-user
-    group: ec2-user
+    owner: root
+    group: root
     mode: 755
 
 hooks:
   BeforeInstall:
     - location: scripts/deploy_before.sh
       timeout: 60
-      runas: ec2-user
+      runas: root
   ApplicationStart:
     - location: scripts/web_start.sh
-      timeout: 300
-      runas: ec2-user
+      timeout: 60
+      runas: root
