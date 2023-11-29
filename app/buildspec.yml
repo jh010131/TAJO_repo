@@ -14,13 +14,12 @@ phases:
       - ./mvnw clean package -DskipTests
   post_build:
     commands:
-      - echo $(basename ./target/*.war)
       - echo Build completed on `date`
       - pwd
 
 artifacts:
   files:
-    - target/*.war
+    - target/spring-petclinic.war
     - app/appspec.yml
     - scripts/app_start.sh
     - scripts/deploy_before.sh
