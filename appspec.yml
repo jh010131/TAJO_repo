@@ -6,7 +6,7 @@ files:
     # destination: /home/ec2-user/build/
     destination: /home/dp_user/build/
 permissions:
-  - object: /
+  - object: /home/dp_user/
     pattern: "**"
     # owner: root
     # group: root
