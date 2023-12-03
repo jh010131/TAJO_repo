@@ -3,25 +3,20 @@ os: linux
 
 files:
   - source: /
-    # destination: /home/ec2-user/build/
-    destination: /home/dp-user/build/
+    destination: /home/ec2-user/build/
 permissions:
   - object: /
     pattern: "**"
-    # owner: root
-    # group: root
-    owner: dp-user
-    group: dp-user
+    owner: root
+    group: root
     mode: 755
 
 hooks:
   BeforeInstall:
     - location: deploy_before.sh
       timeout: 60
-      # runas: root
-      runas: dp-user
+      runas: root
   ApplicationStart:
     - location: app_start.sh
       timeout: 60
-      # runas: root
-      runas: dp-user
+      runas: root
