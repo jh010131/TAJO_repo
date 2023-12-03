@@ -10,4 +10,4 @@ S3_BUCKET="tajo-source-backup"
 S3_PREFIX="$(date +"%Y-%m")/source-code-backup$(date +"%d")"
 
 # AWS CLI를 사용하여 로컬 디렉토리를 S3로 동기화
-sudo aws s3 sync "$SOURCE_DIRECTORY" "s3://$S3_BUCKET/$S3_PREFIX"
+aws s3 sync "$SOURCE_DIRECTORY" "s3://$S3_BUCKET/$S3_PREFIX"
