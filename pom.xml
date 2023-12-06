@@ -72,6 +72,12 @@
       <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
     </dependency>
+    <!-- slack api -->
+    <dependency>
+      <groupId>com.slack.api</groupId>
+      <artifactId>slack-api-client</artifactId>
+      <version>1.12.1</version>
+    </dependency>
 
     <!-- Databases - Uses H2 by default -->
     <dependency>
