@@ -42,12 +42,14 @@
         <button class="btn btn-primary" type="submit" onclick="sendSlackMessage()">Add Visit</button>
         <script>
           function sendSlackMessage() {
-              fetch('/api/send-slack-message', {
-                  method: 'POST',
-              })
-              .then(response => response.text())
-              .then(data => alert(data))
-              .catch(error => console.error('Error sending Slack message:', error));
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "/api/send-slack-message", true);
+              xhr.onreadystatechange = function () {
+                  if (xhr.readyState == 4 && xhr.status == 200) {
+                      alert(xhr.responseText);
+                  }
+              };
+              xhr.send();
           }
       </script>
       </div>
