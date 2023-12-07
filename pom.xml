@@ -73,11 +73,11 @@
       <scope>provided</scope>
     </dependency>
     <!-- slack api -->
-    <dependency>
+    <!-- <dependency>
       <groupId>com.slack.api</groupId>
       <artifactId>slack-api-client</artifactId>
       <version>1.30.0</version>
-    </dependency>
+    </dependency> -->
 
     <!-- Databases - Uses H2 by default -->
     <dependency>
