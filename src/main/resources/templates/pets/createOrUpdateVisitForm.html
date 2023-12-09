@@ -41,17 +41,17 @@
         <input type="hidden" name="petId" th:value="${pet.id}" />
         <button class="btn btn-primary" type="submit" onclick="sendSlackMessage()">Add Visit</button>
         <script>
-          function sendSlackMessage() {
-              var xhr = new XMLHttpRequest();
-              xhr.open("POST", "/api/send-slack-message", true);
-              xhr.onreadystatechange = function () {
-                  if (xhr.readyState == 4 && xhr.status == 200) {
-                      alert(xhr.responseText);
-                  }
-              };
-              xhr.send();
-          }
-      </script>
+            function sendSlackMessage() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/api/send-slack-message", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        alert(xhr.responseText);
+                    }
+                };
+                xhr.send();
+            }
+        </script>
       </div>
     </div>
   </form>
